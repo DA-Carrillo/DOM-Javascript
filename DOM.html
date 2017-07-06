@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Accersar a etiquetas con DOM</title>
+	<meta name="author" content="David Carrillo">
+</head>
+<body>
+<center>
+	<span id="imagenes">
+		<img src="1.jpg" width="200px" height="200px" onmouseover="Ver(1)" onmouseleave="Volver(1)">
+		<img src="2.jpg" width="200px" height="200px" onmouseover="Ver(2)" onmouseleave="Volver(2)">
+		<img src="3.jpg" width="200px" height="200px" onmouseover="Ver(3)" onmouseleave="Volver(3)">
+	</span>
+</center>
+<script type="text/javascript">
+
+	function Ver(variable) {
+
+		if (variable == 1) {
+			document.getElementById('imagenes').childNodes[1].src = '4.jpg';
+		}else if(variable == 2){
+			document.getElementById('imagenes').childNodes[3].src = '5.jpg';
+		}else if(variable == 3){
+			document.getElementById('imagenes').childNodes[5].src = '6.jpg';
+		}
+	}
+
+	function Volver(variable){
+		if (variable == 1) {
+			document.getElementById('imagenes').childNodes[1].src = '1.jpg';
+		}else if(variable == 2){
+			document.getElementById('imagenes').childNodes[3].src = '2.jpg';
+		}else if(variable == 3){
+			document.getElementById('imagenes').childNodes[5].src = '3.jpg';
+		}
+	}
+
+</script>
+
+</body>
+</html>
